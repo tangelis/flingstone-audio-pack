@@ -13,12 +13,25 @@
         <p class="eyebrow">Flingstone Audio Pack</p>
         <h1>Interactive soundboard demo for Boris</h1>
         <p class="subtitle">
-          Preview every gameplay cue in-browser, cycle through the full set, and use the generated WAV pack as a fast prototype baseline.
+          Preview every gameplay cue in-browser, compare three generated directions per sound, and use the WAV pack as a high-fidelity prototype baseline.
         </p>
       </div>
       <div class="hero-panel">
         <div class="now-playing-label">Now playing</div>
+        <label class="pack-picker" for="soundpack-select">
+          <span class="pack-picker-label">Soundpack</span>
+          <select id="soundpack-select" class="pack-select" aria-label="Select soundpack">
+            <option value="0">Pack A - Tight</option>
+            <option value="1">Pack B - Cartoon</option>
+            <option value="2">Pack C - Premium</option>
+            <option value="3">Pack D - Glitch</option>
+          </select>
+        </label>
         <h2 id="active-title">Rubber Stretch</h2>
+        <div class="variant-line">
+          <span id="active-variant-label" class="variant-pill">Variant A</span>
+          <span id="active-variant-name" class="variant-name">Tight garage band</span>
+        </div>
         <p id="active-description">A creaky, rising elastic pull for aiming tension.</p>
         <audio id="main-player" controls preload="metadata"></audio>
         <div class="player-actions">
@@ -36,7 +49,8 @@
     <section class="legend">
       <div class="legend-item"><span class="dot selected-dot"></span> selected cue</div>
       <div class="legend-item"><span class="dot playing-dot"></span> currently playing</div>
-      <div class="legend-item"><span class="shortcut">← / →</span> cycle cues</div>
+      <div class="legend-item"><span class="variant-pill legend-pill">Dropdown</span> switch soundpacks</div>
+      <div class="legend-item"><span class="shortcut">← / →</span> move between cues</div>
       <div class="legend-item"><span class="shortcut">Space</span> play / pause</div>
     </section>
 
