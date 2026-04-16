@@ -168,7 +168,7 @@ const nextButton = document.getElementById("next-button");
 const cycleButton = document.getElementById("cycle-button");
 
 let selectedCueIndex = 0;
-let selectedPackIndex = 0;
+let selectedPackIndex = 3;
 let playingKey = null;
 let cycleMode = false;
 
