@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flingstone Soundboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Flingstone Audio Pack</p>
+        <h1>Interactive soundboard demo for Boris</h1>
+        <p class="subtitle">
+          Preview every gameplay cue in-browser, cycle through the full set, and use the generated WAV pack as a fast prototype baseline.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <div class="now-playing-label">Now playing</div>
+        <h2 id="active-title">Rubber Stretch</h2>
+        <p id="active-description">A creaky, rising elastic pull for aiming tension.</p>
+        <audio id="main-player" controls preload="metadata"></audio>
+        <div class="player-actions">
+          <button id="prev-button" class="secondary">Previous</button>
+          <button id="play-button" class="primary">Play selected</button>
+          <button id="next-button" class="secondary">Next</button>
+        </div>
+        <div class="player-actions">
+          <button id="cycle-button" class="ghost">Play all cues</button>
+          <a class="download-link" href="https://github.com/tangelis/flingstone-audio-pack" target="_blank" rel="noreferrer">View source repo</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="legend">
+      <div class="legend-item"><span class="dot selected-dot"></span> selected cue</div>
+      <div class="legend-item"><span class="dot playing-dot"></span> currently playing</div>
+      <div class="legend-item"><span class="shortcut">← / →</span> cycle cues</div>
+      <div class="legend-item"><span class="shortcut">Space</span> play / pause</div>
+    </section>
+
+    <main>
+      <section class="grid" id="sound-grid"></section>
+    </main>
+  </div>
+
+  <script src="soundboard.js"></script>
+</body>
+</html>

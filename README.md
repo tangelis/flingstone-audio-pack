@@ -2,6 +2,10 @@
 
 Procedurally generated placeholder game audio for Boris's `Flingstone` cue list.
 
+## Demo
+
+A GitHub Pages soundboard demo is included in `index.html` so the pack can be previewed directly in the browser.
+
 ## Included Cues
 
 1. `01_rubber_stretch.wav`
@@ -24,6 +28,7 @@ Procedurally generated placeholder game audio for Boris's `Flingstone` cue list.
 - These are lightweight starter assets meant to be immediately usable for prototyping.
 - All files are generated from `generate_sounds.py` so the pack is reproducible.
 - Output format is mono `.wav` at 44.1 kHz for easy editing in common audio tools.
+- The static demo uses the same rendered WAV files and supports next/previous cue cycling plus a play-all mode.
 
 ## Regenerate
 
