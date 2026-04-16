@@ -144,7 +144,10 @@ function updateVisualState() {
   const cue = cues[selectedIndex];
   title.textContent = cue.title;
   description.textContent = cue.description;
-  player.src = cue.file;
+  if (player.dataset.file !== cue.file) {
+    player.src = cue.file;
+    player.dataset.file = cue.file;
+  }
   playButton.textContent = player.paused || playingIndex !== selectedIndex ? "Play selected" : "Pause";
   cycleButton.textContent = cycleMode ? "Stop play all" : "Play all cues";
 }
